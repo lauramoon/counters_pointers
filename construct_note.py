@@ -1,12 +1,4 @@
-def make_counter(string):
-    """
-    returns dictionary with letter as key and frequescy as value
-    """
-    counter = {}
-    for char in string:
-        counter[char] = 1 if char not in counter else counter[char] + 1
-
-    return counter
+from make_counter import make_counter
 
 def construct_note(msg, letters):
     msg_counter = make_counter(msg)
