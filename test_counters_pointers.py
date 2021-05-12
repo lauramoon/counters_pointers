@@ -3,6 +3,7 @@ from construct_note import construct_note
 from average_pair import average_pair
 from two_array_object import two_array_object
 from same_frequency import same_frequency
+from separate_positive import separate_positive
 
 class testCountersPointers(unittest.TestCase):
     def test_construct_note(self):
@@ -30,4 +31,8 @@ class testCountersPointers(unittest.TestCase):
         self.assertFalse(same_frequency(34, 14))
         self.assertFalse(same_frequency(22, 222))
 
-    
+    def test_separate_positive(self):
+        self.assertEqual(separate_positive([1, 2, 3]), [1, 2, 3])
+        self.assertEqual(separate_positive([-1, -2, -3]), [-1, -2, -3])
+        self.assertEqual(separate_positive([2, -1, -3, 6, -8, 10]), [2, 10, 6, -3, -8, -1])
+        self.assertEqual(separate_positive([5, 10, -15, 20, 25]), [5, 10, 25, 20, -15])
