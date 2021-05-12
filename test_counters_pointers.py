@@ -1,9 +1,11 @@
+from typing import SupportsBytes
 import unittest
 from construct_note import construct_note
 from average_pair import average_pair
 from two_array_object import two_array_object
 from same_frequency import same_frequency
 from separate_positive import separate_positive
+from is_subsequence import is_subsequence
 
 class testCountersPointers(unittest.TestCase):
     def test_construct_note(self):
@@ -36,3 +38,13 @@ class testCountersPointers(unittest.TestCase):
         self.assertEqual(separate_positive([-1, -2, -3]), [-1, -2, -3])
         self.assertEqual(separate_positive([2, -1, -3, 6, -8, 10]), [2, 10, 6, -3, -8, -1])
         self.assertEqual(separate_positive([5, 10, -15, 20, 25]), [5, 10, 25, 20, -15])
+
+    def test_is_subsequence(self):
+        self.assertTrue(is_subsequence("hello", "hello world"))
+        self.assertTrue(is_subsequence("sing", "sting"))
+        self.assertTrue(is_subsequence("abc", "abracadabra"))
+        self.assertFalse(is_subsequence("abc", "acb"))
+        self.assertFalse(is_subsequence("notasubstring", "banana"))
+        self.assertFalse(is_subsequence("almost", "almossssss"))
+
+    
