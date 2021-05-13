@@ -1,4 +1,3 @@
-from typing import SupportsBytes
 import unittest
 from construct_note import construct_note
 from average_pair import average_pair

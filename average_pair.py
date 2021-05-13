@@ -1,4 +1,8 @@
 def average_pair(arr, avg):
+    """
+    returns true if there is a pair of intergers in sorted list arr that has the average avg
+    in O(N) time
+    """
     lower = 0
     upper = len(arr) - 1
 

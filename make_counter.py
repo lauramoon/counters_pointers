@@ -1,6 +1,6 @@
 def make_counter(string):
     """
-    returns dictionary with letter as key and frequescy as value
+    returns dictionary with character as key and frequency as value
     """
     counter = {}
     for char in string:

@@ -1,4 +1,8 @@
 def separate_positive(arr):
+    """
+    arr is list of non-zero integers. in O(N) time, separate positive integers to the right
+    and negative to the left, in place
+    """
     lower = 0
     upper = len(arr) - 1
 
