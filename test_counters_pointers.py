@@ -6,6 +6,7 @@ from two_array_object import two_array_object
 from same_frequency import same_frequency
 from separate_positive import separate_positive
 from is_subsequence import is_subsequence
+from count_pairs import count_pairs
 
 class testCountersPointers(unittest.TestCase):
     def test_construct_note(self):
@@ -47,4 +48,11 @@ class testCountersPointers(unittest.TestCase):
         self.assertFalse(is_subsequence("notasubstring", "banana"))
         self.assertFalse(is_subsequence("almost", "almossssss"))
 
-    
+    def test_count_pairs(self):
+        self.assertEqual(count_pairs([1, 2, 3, 4, 5], 10), 0)
+        self.assertEqual(count_pairs([1, 2, 3, 4, 5], 10), 0)
+        self.assertEqual(count_pairs([4, 6, 2, 7], 10), 1)
+        self.assertEqual(count_pairs([0, -4], -4), 1)
+        self.assertEqual(count_pairs([3, 1, 5, 4, 2], 6), 2)
+        self.assertEqual(count_pairs([1, 2, 3, 0, -1, -2], 0), 2)
+        self.assertEqual(count_pairs([10, 4, 8, 2, 6, 0], 10), 3)
